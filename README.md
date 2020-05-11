@@ -2,6 +2,7 @@
 
 * Target : `Linux x86-32`
 * NULL Free
+* Tested on : Ubuntu 18.04.04
 * TCP Port Editable (Python Script)
 * Manual stack manipulation (no push/pop) but size heavy.
 
@@ -11,7 +12,15 @@ Blog post about creation of that Shellcode : https://phrozen.io/docs/linux/slae3
 
 `nasm -f elf32 -o bindshell.nasm`
 
-`ld bindshell.o -o bindshell
+`ld bindshell.o -o bindshell`
+
+### Test program
+
+`nc -lvp 443`
+
+Then
+
+`./bindshell`
 
 ## Build Shellcode from Python Builder`
 
